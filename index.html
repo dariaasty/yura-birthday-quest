@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Юрочка, с днем рождения</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app" id="app">
+      <section class="screen intro active" data-screen="intro">
+        <div class="topline">
+          <span>birthday quest 💜</span>
+          <span>1000 баллов</span>
+        </div>
+        <div class="intro-card">
+          <p class="kicker">Юрочка, с днем рождения 😌</p>
+          <h1>Моя подруженька, пупсик маленький, огуречик, боберчик, моя палочка twix.</h1>
+          <p>
+            Для тебя уже приготовлены подарочки, но сначала нужно пройти маленькую проверку:
+            настоящая ли ты подружка.
+          </p>
+          <p>
+            Потому что есть всякие, которые тоже лезут на мое место, а нам нужно официально
+            подтвердить, что место занято навсегда 😏
+          </p>
+          <p class="goal">Твоя цель: набрать 1000 баллов и показать скрин мне 💜</p>
+        </div>
+        <button class="primary" id="startBtn" type="button">Начать проверку 🔥</button>
+      </section>
+
+      <section class="screen quiz" data-screen="quiz">
+        <button class="back-button" id="quizBackBtn" type="button">← Назад</button>
+        <div class="scorebar">
+          <div>
+            <span class="mini-label">Баллы</span>
+            <strong id="scoreText">0 / 1000</strong>
+          </div>
+          <div class="meter" aria-hidden="true"><span id="scoreMeter"></span></div>
+        </div>
+
+        <div class="media-slot" id="mediaSlot"></div>
+        <div class="question-card">
+          <p class="step" id="stepText"></p>
+          <h2 id="questionText"></h2>
+          <div class="answers" id="answers"></div>
+          <p class="answer-feedback" id="answerFeedback" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="screen result" data-screen="result">
+        <button class="back-button" id="resultBackBtn" type="button">← Переответить</button>
+        <div class="result-media" id="resultMedia"></div>
+        <div class="stamp" id="resultStamp">Правильно</div>
+        <p class="result-copy" id="resultCopy"></p>
+        <div class="score-pill" id="resultScore">0 / 1000</div>
+        <button class="primary" id="nextBtn" type="button">Дальше</button>
+      </section>
+
+      <section class="screen official" data-screen="official">
+        <div class="certificate">
+          <p class="official-small">Ты прошла все вопросы.</p>
+          <h2 class="official-main">Люди такие пешки 😏</h2>
+          <p class="goal">Остался только красивый скрин на 1000 баллов.</p>
+        </div>
+        <button class="primary" id="officialBtn" type="button">Забрать 1000 баллов</button>
+      </section>
+
+      <section class="screen final" data-screen="final">
+        <div class="certificate">
+          <p class="kicker">Проверка завершена 💜</p>
+          <h2>Юречик, ты набрала 1000 из 1000 баллов.</h2>
+          <p>
+            Статус: моя самая лучшая подружка на всю жизнь и во веки веков.
+            Будем отмечать дни рождения, свадьбы, летать во все страны мира,
+            поедем друг к другу в роддом и встретим старость вместе.
+          </p>
+          <p class="goal">Покажи этот скрин мне для получения подарочка.</p>
+        </div>
+        <button class="secondary" id="bonusBtn" type="button">Хочу еще один подарок</button>
+      </section>
+
+      <section class="screen bonus" data-screen="bonus">
+        <div class="bonus-card">
+          <p class="kicker">Еще один подарочек 😌</p>
+          <h2>Окей, у тебя день рождения сегодня.</h2>
+          <p>На, получи еще дополнительный подарочек. Но сначала один маленький вопрос 😏</p>
+          <button class="primary" id="bonusUnlockBtn" type="button">Давай подарочек 🔥</button>
+        </div>
+      </section>
+
+      <section class="screen archive" data-screen="archive">
+        <div class="archive-card">
+          <p class="kicker">Последний подарок 🔥</p>
+          <h2>Если ответишь правильно, я навсегда и везде удалю эту фотку.</h2>
+          <img class="archive-image" src="./assets/bonus-bad.png" alt="">
+          <p class="question-small">Какой это год?</p>
+          <div class="answers compact">
+            <button type="button" data-archive>2020</button>
+            <button type="button" data-archive>2021</button>
+            <button type="button" data-archive>2022</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen never" data-screen="never">
+        <div class="certificate">
+          <p class="kicker">Чё, угораешь? 😏</p>
+          <img class="archive-image" src="./assets/bonus-laugh.png" alt="">
+          <h2>Ты реально думаешь, что я могу удалить хотя бы одну твою фотку с телефона?</h2>
+          <p>Конечно нет. Никогда. Эта фотка теперь часть архива, истории и нашей дружбы.</p>
+          <p class="goal">Доп-подарок будешь ждать внутри основного подарка. Сделай скрин этого тоже 💜</p>
+          <a class="telegram-button" href="https://t.me/daria_asty" target="_blank" rel="noreferrer">
+            Сообщить подружке, что я всё прошла
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
