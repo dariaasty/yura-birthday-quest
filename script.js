@@ -166,7 +166,7 @@ function mediaMarkup(question) {
   }
 
   if (question.video) {
-    return `<video src="${question.video}" controls playsinline preload="metadata"></video>`;
+    return `<video src="${question.video}" controls playsinline preload="none"></video>`;
   }
 
   return "";
